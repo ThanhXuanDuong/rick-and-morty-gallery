@@ -1,23 +1,9 @@
 import React from 'react';
 import './App.css';
 import CharacterCard from "./CharacterCard";
+import Character from "./Character";
+import CharacterGallery from "./CharacterGallery";
 
-type Character ={
-  id: number;
-  name: string;
-  species:string;
-  status: string;
-  type:string;
-  gender: string;
-  origin: {   name: string;
-              url: string; };
-  location:{name: string;
-            url: string; };
-  image:string;
-  episode: string[];
-  url:string;
-  created: string;
-}
 
 function allCharacters():Character[]{
   return [
@@ -1148,21 +1134,10 @@ function allCharacters():Character[]{
   ];
 }
 
-
-
 function App() {
   const characters=allCharacters();
   return (
-    <div className="card-container">
-      <div className="cards">
-        {characters.map(character => (<CharacterCard
-            key={character.id}
-            name={character.name}
-            image={character.image}
-            status={character.status}
-        />))}
-      </div>
-    </div>
+      <CharacterGallery characters={characters}/>
   );
 }
 
