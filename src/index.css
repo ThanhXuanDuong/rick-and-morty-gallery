@@ -17,6 +17,11 @@ code {
   margin: 20px
 }
 
+.cards-container input{
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
 .cards{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
